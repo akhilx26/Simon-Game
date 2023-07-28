@@ -1,7 +1,6 @@
 var userClickedPattern = [];
 var gamePattern = [];
 var buttonColors = ["red", "blue", "green", "yellow"];
-var count = 0;
 
 var started = false;
 var level = 0;
@@ -50,22 +49,30 @@ function animatePress(currentColor){
     },100);
 }
 
+function startOver(){
+    level = 0;
+    gamePattern = [];
+    userClickedPattern = [];
+    started = false;
+}
+
 function checkAnswer(){
-    console.log(userClickedPattern);
-    console.log(gamePattern);
+    // console.log(userClickedPattern);
+    // console.log(gamePattern);
     if (userClickedPattern[userClickedPattern.length-1] === gamePattern[gamePattern.length-1]){
-        console.log("success");
+        // console.log("success");
         setTimeout(function(){
             nextSequence();
             userClickedPattern = [];
-        },1000);
+        },500);
     }
     else{
         $("body").addClass("wrong");
         setTimeout(function(){
             $("body").removeClass("wrong");
         },300);
-        $("#level-title").text("Game Over! Try Again");
+        $("#level-title").text("Game Over! Press Any Key to Restart");
         playSound("wrong");
+        startOver();
     }
 }
