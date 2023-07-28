@@ -26,6 +26,11 @@ body {
   border-radius: 20%;
 }
 
+.btn:hover{
+  cursor: pointer;
+  box-shadow: 1.3em 0 .5em red, -1em 0 .5em green, 1em .9em yellow,  2em 0 .9em blue;
+}
+
 .game-over {
   background-color: red;
   opacity: 0.8;
@@ -54,4 +59,32 @@ body {
 
 .wrong{
   background-color: red;
+}
+
+.instructions1{
+  height: 150px;
+  width: 250px;
+  border: 2px solid blue;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 1.3em 0 .5em red, -1em 0 .5em green, 1em .9em yellow;
+  position: absolute;
+  left: 80px;
+  top: 240px;
+}
+
+.instructions2{
+  height: 150px;
+  width: 250px;
+  border: 2px solid blue;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 1.3em 0 .5em red, -1em 0 .5em green, 1em .9em yellow;
+  position: absolute;
+  right: 80px;
+  top: 240px;
+}
+
+.instructions1 > p,.instructions2 > p{
+  color: white;
 }

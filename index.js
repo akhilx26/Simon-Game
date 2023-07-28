@@ -24,6 +24,27 @@ $(".btn").click(function(){
     }
 })
 
+// $(document).keypress(function(event){
+//     if (event.key === "g"){
+//         var userChosenColor = "green";
+//     }else if (event.key === "r"){
+//         var userChosenColor = "red";
+//     }
+//     else if (event.key === "b"){
+//         var userChosenColor = "blue";
+//     }else if (event.key === "y"){
+//         var userChosenColor = "yellow";
+//     }
+    
+//     userClickedPattern.push(userChosenColor)
+//     // console.log(userClickedPattern);
+//     playSound(userChosenColor);
+//     animatePress(userChosenColor);
+//     if(userClickedPattern.length === gamePattern.length){
+//         checkAnswer();
+//     }
+// })
+
 function nextSequence() {
 
     level++
